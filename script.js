@@ -24,7 +24,8 @@
 // §To calculate average of 3 values, add them all together and divide by 3
 // §To check if number A is at least double number B, check for A >= 2 * B.
 // Apply this to the team's average scores 😉
-var calcAverage = () => {
+
+var dataMatch = () => {
   var scoreDolphin1 = 44;
   var scoreDolphin2 = 23;
   var scoreDolphin3 = 71;
@@ -32,21 +33,40 @@ var calcAverage = () => {
   var scoreKoalas1 = 65;
   var scoreKoalas2 = 54;
   var scoreKoala3 = 49;
-
-  var averageDolphin = (scoreDolphin1 + scoreDolphin2 + scoreDolphin3) / 3;
-  var averageKoala = (scoreKoala3 + scoreKoalas1 + scoreKoalas2) / 3;
-  console.log(averageDolphin, averageKoala);
-  checkWinner(averageDolphin, averageKoala);
-
+  calcAverage(
+    scoreDolphin1,
+    scoreDolphin2,
+    scoreDolphin3,
+    scoreKoalas1,
+    scoreKoalas2,
+    scoreKoala3
+  );
   scoreDolphin1 = 85;
   scoreDolphin2 = 54;
   scoreDolphin3 = 41;
   scoreKoalas1 = 23;
   scoreKoalas2 = 34;
   scoreKoala3 = 27;
-  averageDolphin = (scoreDolphin1 + scoreDolphin2 + scoreDolphin3) / 3;
-  averageKoala = (scoreKoala3 + scoreKoalas1 + scoreKoalas2) / 3;
-  console.log(averageDolphin, averageKoala);
+  calcAverage(
+    scoreDolphin1,
+    scoreDolphin2,
+    scoreDolphin3,
+    scoreKoalas1,
+    scoreKoalas2,
+    scoreKoala3
+  );
+};
+
+var calcAverage = (
+  scoreDolphin1,
+  scoreDolphin2,
+  scoreDolphin3,
+  scoreKoalas1,
+  scoreKoalas2,
+  scoreKoala3
+) => {
+  var averageDolphin = (scoreDolphin1 + scoreDolphin2 + scoreDolphin3) / 3;
+  var averageKoala = (scoreKoala3 + scoreKoalas1 + scoreKoalas2) / 3;
   checkWinner(averageDolphin, averageKoala);
 };
 
@@ -62,4 +82,4 @@ var checkWinner = (averageDolphin, averageKoala) => {
   }
 };
 
-calcAverage();
+dataMatch();
